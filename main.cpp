@@ -15,7 +15,8 @@ int main() {
     for (int i = 0; i < 44100; i++) {
         // samples.push_back(sound::SquareWave(i, 440, 0.5));
         // samples.push_back(sound::Noise(0.5)); 
-        samples.push_back(sound::SineWave(i, 440, 0.5));
+        // samples.push_back(sound::SineWave(i, 440, 0.5));
+        samples.push_back(sound::SawtoothWave(i, 196, 0.3, 32));
     }
 
 

@@ -34,6 +34,23 @@ namespace sound {
         result = rand() % amplitude;
         return result;
     }
+
+    double SawtoothWave(double time, double freq, double amp, double harmonics) {
+        short result = 0;
+        short amplitude = 32767 * amp;
+
+        // result = amplitude * sin(TWOPI * time * freq * 1 / 44100) / 1;
+        // result = sin(TWOPI * time * freq / 44100);
+        // std::cout<<"result: "<<result<<std::endl;
+        for (int i = 1; i <= harmonics; i++) {
+            result += amplitude * sin(TWOPI * time * freq * i / 44100) / i;
+        }
+        // result = result * amplitude;
+        // std::cout<<"result: "<<result<<std::endl;
+        // std::cout<<"amplitude: "<<amplitude<<std::endl;
+        return result;
+
+    }
 }
 
 #endif
