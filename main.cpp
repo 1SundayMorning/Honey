@@ -16,7 +16,9 @@ int main() {
         // samples.push_back(sound::SquareWave(i, 440, 0.5));
         // samples.push_back(sound::Noise(0.5)); 
         // samples.push_back(sound::SineWave(i, 440, 0.5));
-        samples.push_back(sound::SawtoothWave(i, 196, 0.3, 32));
+        // samples.push_back(sound::SawtoothWave(i, 110, 0.3, 32) + sound::SquareWave(i, 164.81, 0.2));
+        // samples.push_back(sound::SawtoothWave(i, 220, 0.3, 32));
+        samples.push_back(sound::SawtoothModWave(i, 220, 0.3));
     }
 
 
